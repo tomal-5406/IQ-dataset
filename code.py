@@ -25,7 +25,6 @@ data[~np.isfinite(data)] = 1e-9
 data_compressed = np.log1p(data)
 print("Applied log compression.")
 
-
 # Plot the last frame if 3D
 if data_compressed.ndim == 3:
     plt.imshow(data_compressed[:, :, -1], cmap='jet')
@@ -58,7 +57,6 @@ data[~np.isfinite(data)] = 1e-9
 # Add a small constant to avoid log(0) - np.log1p already handles the +1
 data_compressed = np.log1p(data)
 print("Applied log compression.")
-
 
 # Plot the last frame if 3D
 if data_compressed.ndim == 3:
